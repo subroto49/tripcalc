@@ -4,11 +4,22 @@ body{
     font-size: 13px;
 }
 
+.right{
+    text-align: right;
+}
+
+.center{
+    text-align: center;
+}
+legend{
+    border-bottom: 1px solid #EEEEEE;
+}
+
 @media only screen and (max-width: 767px) {
     
     .login-wrap{
         border-radius: 10px;
-        top: 20%;
+        top: 22%;
         left:16%;
         padding: 20px;
         width:100%;
@@ -34,7 +45,7 @@ body{
     
     .login-wrap{
         border-radius: 10px;
-        top: 25%;
+        top: 20%;
         left:30%;
         padding: 20px;
         width:100%;
@@ -53,6 +64,18 @@ body{
     }
     .navbar .navbar-form {
         margin-top: 4px;
+    }
+    
+    .remember{
+        padding-top:15px;
+    }
+    
+    .login-block{
+        padding: 10px;
+    }
+    
+    .login-block .row{
+        margin-top:10px;
     }
 }
 
