@@ -53,4 +53,6 @@ $route['default_controller'] = 'login';
 $route['404_override'] = 'error/404';
 $route['register'] = 'login/register';
 $route['check_availability'] = 'login/check_availability';
+$route['logout'] = 'login/logout';
+$route['dashboard'] = 'dashboard/index';
 $route['translate_uri_dashes'] = FALSE;

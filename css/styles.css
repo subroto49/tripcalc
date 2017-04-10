@@ -18,13 +18,13 @@ legend{
 @media only screen and (max-width: 767px) {
     
     .login-wrap{
-        border-radius: 10px;
+        border-radius: 50px;
         top: 22%;
-        left:16%;
+        left:10%;
         padding: 20px;
         width:100%;
         margin:auto;
-        max-width:65%;
+        max-width:80%;
         position:absolute;
         box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
     }

@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
         <?php include 'header/header.php' ?>
         <div class="container-fluid">
-            <div class="row login-wrap well infobox">
+            <div class="row well login-wrap">
                 <div class="login-block">
                     <form class="form-horizontal" method="post">
                         <fieldset>
@@ -42,9 +42,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input id="inputPass" name='inputPass' type="password" class="form-control" placeholder="Password" data-validation="emptycheck">
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 col-xs-12 col-lg-6 remember">
-                                        <input id="check" type="checkbox" class="" checked>
-                                        <label for="check"><span class="icon"></span> Remember me</label>
+                                    <div class="col-md-12 col-xs-12 col-lg-6">
+                                        <label>
+                                        <input id="check" type="checkbox" checked name="inputRemember" value="1"> Remember me
+                                        </label>
                                     </div>
                                     <div class="col-md-12 col-xs-12 col-lg-6 right">
                                         <input type="submit" class="btn btn-raised btn-primary col-md-12 col-xs-12 col-lg-6" value="Sign In">
