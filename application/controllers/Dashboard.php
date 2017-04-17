@@ -12,8 +12,10 @@ class Dashboard extends CI_Controller {
 
     public function index() {
         $user_details = validate_user_status();
+        $data['settings'] = $this->settings;
         if($user_details['success']){
-            echo "Hi!!!! ". $user_details['username']; 
+            $data['menu'] = fetch_menu();
+            $this->load->view('dashboard',$data);
         }else{
             redirect('logout');
         }

@@ -43,11 +43,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 col-xs-12 col-lg-6">
-                                        <label>
-                                        <input id="check" type="checkbox" checked name="inputRemember" value="1"> Remember me
-                                        </label>
+                                        <div class="checkbox checkbox-inline checkbox-styled">
+                                            <input id="CheckBox1" name="CheckBox1" text=" " tooltip="You will be signed in until you logout" tabindex="4" type="checkbox">
+<span>Remember me</span>
+                                        </div>
                                     </div>
-                                    <div class="col-md-12 col-xs-12 col-lg-6 right">
+                                    <div class="col-md-12 col-xs-12 col-lg-6 signin-butt">
                                         <input type="submit" class="btn btn-raised btn-primary col-md-12 col-xs-12 col-lg-6" value="Sign In">
                                     </div>
                                 </div>

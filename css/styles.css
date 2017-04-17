@@ -77,10 +77,15 @@ legend{
     .login-block .row{
         margin-top:10px;
     }
+
+    .signin-butt input[type=submit]{
+        position: absolute;
+        right: 10px;        
+    }
 }
 
 .sign-in-htm{
-    margin: 10px;
+    margin: 5px 10px;
 }
 
 .sign-in-htm .row{
@@ -93,4 +98,8 @@ legend{
 
 .navbar{
     min-height:30px;
+}
+
+.login-block legend{
+    margin-bottom: 10px;
 }

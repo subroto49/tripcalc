@@ -17,6 +17,7 @@ class Login extends CI_Controller {
         $username = (isset($session_details['username'])) ? $session_details['username'] : '';
         $cookie_data = get_cookie('rememberme');
         $pstdata = $this->input->post();
+        $data['menu'] = fetch_menu('login');
         if (trim($username) == '' && trim($cookie_data) == '') {
             if (count($pstdata)) {
                 $userdata['username'] = $pstdata['inputUser'];
@@ -38,7 +39,6 @@ class Login extends CI_Controller {
                         break;
                 }
             } else {
-                $data['page'] = 'login';
                 $this->load->view('login', $data);
             }
         } else if (trim($username) != '') {
@@ -52,7 +52,6 @@ class Login extends CI_Controller {
                 header('location: dashboard');
             } else {
                 delete_cookie('rememberme');
-                $data['page'] = 'login';
                 $this->load->view('login', $data);
             }
         }
@@ -61,7 +60,6 @@ class Login extends CI_Controller {
     public function register() {
         $data['settings'] = $this->settings;
         $username = (isset($session_details['username'])) ? $session_details['username'] : '';
-        $data['page'] = 'register';
         $pstdata = $this->input->post();
         if (count($pstdata)) {
             $registerdata['username'] = $pstdata['inputUser'];
@@ -70,6 +68,7 @@ class Login extends CI_Controller {
 
             $data['register_success'] = $this->login->registerUser($registerdata);
         }
+        $data['menu'] = fetch_menu('register');
         $this->load->view('register', $data);
     }
 

@@ -60,9 +60,7 @@ class Login_model extends CI_Model {
                 ];
                 if ($res['password'] == password_hash($userdata['password'], PASSWORD_DEFAULT, $option)) {
                     $cookiedata = '';
-                    if(isset($userdata['rememberme']) && $userdata['rememberme']){
-                        $cookiedata = $this->save_cookie_data($res['userid']);
-                    }
+                    $cookiedata = $this->save_cookie_data($res['userid'],$userdata['rememberme']);
                     $udata = array('success' => 1, 'userdetails' => array('username' => $res['username'], 'userid' => $res['userid'],"saved_data" => $cookiedata));
                 } else {
                     $udata = array('success' => 0);
@@ -74,7 +72,7 @@ class Login_model extends CI_Model {
         return $udata;
     }
 
-    function save_cookie_data($userid) {
+    function save_cookie_data($userid,$rememberflag) {
         $cookie_value = '';
         if (trim($userid) != '' && $userid != 0) {
             $cookie_value = base64_encode($userid."_".$this->generateRandomString(25));
@@ -82,7 +80,7 @@ class Login_model extends CI_Model {
             $cookie = array(
             'name' => 'rememberme',
             'value' => $cookie_value,
-            'expire' => time() + 86500,
+            'expire' => ($rememberflag) ? time() + 86500 : "",
             'path' => '/',
             );
             set_cookie($cookie);

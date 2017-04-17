@@ -12,37 +12,26 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <?php
-                if (trim($username) != '') {
-                    ?>
-                    <?php
-                } else {
-                    ?>
-                    <li><a href="javascript:void(0)">Link</a></li>
-                    <li class="dropdown">
-                        <?php
-                        switch ($page) {
-                            case 'login':
-                                ?>
-                                <a href="register">Register</a>
-                                <?php
-                                break;
-                            case 'register':
-                                ?>
-                                <a href="/">Login</a>
-                                <?php
-                                break;
-                        }
-                        ?>
-                        <!--<ul class="dropdown-menu">
-                            <li><a href="javascript:void(0)">Action</a></li>
-                            <li><a href="javascript:void(0)">Another action</a></li>
-                            <li><a href="javascript:void(0)">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="javascript:void(0)">Separated link</a></li>
-                        </ul>-->
-                    </li>
-                    <?php
-                }
+                if (isset($menu) && count($menu)) {
+                    foreach($menu as $menuid => $menuarr){
+                ?>
+                        <li <?php echo (count($menuarr['child'])) ? 'class="dropdown"' : '' ?>>
+                        <a href="<?php echo $menuarr['menuurl'];?>" <?php echo (count($menuarr['child'])) ? 'data-target="#" class="dropdown-toggle" data-toggle="dropdown"' : ''?>><?php echo $menuarr['menuname'];?>
+
+                    <?php if(count($menuarr['child'])){?>
+                        <b class="caret"></b>
+                    <?php }?>
+                        </a>
+                            <?php if(count($menuarr['child'])){?>
+                                <ul class="dropdown-menu" role="menu">
+                                    <?php foreach($menuarr['child'] as $chmenuid => $chmenuarr){ ?>
+                                        <li><a href="<?php echo $chmenuarr['menuurl'];?>"><?php echo $chmenuarr['menuname'];?></a></li>
+                                    <?php }?>
+                                </ul>  
+                            <?php } ?>
+                        </li>
+                <?php }
+                    }
                 ?>
             </ul>
         </div>
