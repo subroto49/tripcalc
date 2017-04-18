@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0)"><?php echo $settings['brandname']; ?></a>
+            <a class="navbar-brand" href="/dashboard"><?php echo $settings['brandname']; ?></a>
         </div>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav navbar-right">

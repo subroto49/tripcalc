@@ -49,10 +49,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['translate_uri_dashes'] = FALSE;
 $route['default_controller'] = 'login';
+
 $route['404_override'] = 'error/404';
-$route['register'] = 'login/register';
+
+$route['register-yourself'] = 'login/register';
 $route['check_availability'] = 'login/check_availability';
 $route['logout'] = 'login/logout';
 $route['dashboard'] = 'dashboard/index';
+
+$route['create-a-new-trip'] = 'trip/create_trip';
+$route['go-to-current-trip'] = 'trip/view_current_trip';
+$route['get-a-view-of-old-trips'] = 'trip/fetch_old_trips';
+$route['add-friends-to-your-master-list'] = 'friend/add_friends';
+
 $route['translate_uri_dashes'] = FALSE;

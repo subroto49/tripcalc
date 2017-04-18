@@ -103,3 +103,14 @@ legend{
 .login-block legend{
     margin-bottom: 10px;
 }
+
+.dropdown-menu{
+    background-color: #009681;
+}
+
+.navbar .dropdown-menu li > a, 
+.navbar.navbar-default .dropdown-menu li > a{
+    color: #EEEEEE;
+    font-size: 13px;
+    padding: 3px 10px;
+}
