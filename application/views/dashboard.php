@@ -23,6 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
         <?php include 'header/header.php' ?>
         <div class="container-fluid">
+            <div class="col-lg-offset-2 data well">
+                Hi!!! Welcome Again            
+            </div>
         </div>
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

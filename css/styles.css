@@ -4,6 +4,10 @@ body{
     font-size: 13px;
 }
 
+input[type=text]{
+    font-size: 15px;
+}
+
 .right{
     text-align: right;
 }
@@ -39,6 +43,12 @@ legend{
     .navbar{
         z-index: 1000;
     }
+
+    .data{
+        padding: 30px;
+        max-width: 99%;
+        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);    
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -57,11 +67,17 @@ legend{
     
     .navbar .navbar-nav > li > a{
         padding:10px;
+        font-size: 15px;
+        color: #FFFFFF;
     }
     
     .navbar-brand{
         padding: 6px 15px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #FFFFFF;
     }
+
     .navbar .navbar-form {
         margin-top: 4px;
     }
@@ -81,6 +97,14 @@ legend{
     .signin-butt input[type=submit]{
         position: absolute;
         right: 10px;        
+    }
+
+    .data{
+        max-width: 65%;
+    }
+
+    .data > .panel{
+        max-width: 60%;
     }
 }
 
@@ -113,4 +137,14 @@ legend{
     color: #EEEEEE;
     font-size: 13px;
     padding: 3px 10px;
+}
+
+.panel.panel-default > .panel-heading {
+    background-color: #009688;
+    color: #FFFFFF;
+    font-size: 13px;
+}
+
+.form-group{
+    margin-top: 5px;
 }

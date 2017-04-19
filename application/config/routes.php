@@ -62,6 +62,6 @@ $route['dashboard'] = 'dashboard/index';
 $route['create-a-new-trip'] = 'trip/create_trip';
 $route['go-to-current-trip'] = 'trip/view_current_trip';
 $route['get-a-view-of-old-trips'] = 'trip/fetch_old_trips';
-$route['add-friends-to-your-master-list'] = 'friend/add_friends';
+$route['add-members'] = 'friends/add_friends';
 
 $route['translate_uri_dashes'] = FALSE;
