@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: tripcalc
 -- ------------------------------------------------------
--- Server version	5.7.17-0ubuntu0.16.04.1
+-- Server version	5.7.17-0ubuntu0.16.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -33,7 +33,7 @@ CREATE TABLE `trip_menu` (
   `menuparent` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`menuid`),
   KEY `menustatus` (`menustatus`,`menuaccess`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `trip_menu` (
 
 LOCK TABLES `trip_menu` WRITE;
 /*!40000 ALTER TABLE `trip_menu` DISABLE KEYS */;
-INSERT INTO `trip_menu` VALUES (1,'Login','/',1,'2017-04-17 12:07:59','register',1,0),(2,'Register','/register-yourself',1,'2017-04-17 12:08:11','login',1,0),(3,'Trip','#',1,'2017-04-17 13:15:44','user',1,0),(4,'New Trip','/create-a-new-trip',1,'2017-04-17 13:16:26','user',1,3),(5,'Current Trip','/go-to-current-trip',1,'2017-04-17 13:16:44','user',2,3),(6,'Old Trips','/get-a-view-of-old-trips',1,'2017-04-17 13:17:00','user',3,3),(7,'Friends List','/add-friends-to-your-master-list',1,'2017-04-17 13:18:16','user',2,0);
+INSERT INTO `trip_menu` VALUES (1,'Login','/',1,'2017-04-17 12:07:59','register',1,0),(2,'Register','/register-yourself',1,'2017-04-17 12:08:11','login',1,0),(3,'Trip','#',1,'2017-04-17 13:15:44','user',1,0),(4,'New Trip','/create-a-new-trip',1,'2017-04-17 13:16:26','user',1,3),(5,'Current Trip','/go-to-current-trip',1,'2017-04-17 13:16:44','user',2,3),(6,'Old Trips','/get-a-view-of-old-trips',1,'2017-04-17 13:17:00','user',3,3),(7,'Members List','/add-members',1,'2017-04-17 13:18:16','user',2,0),(8,'Logout','/logout',1,'2017-04-18 10:24:13','user',100,0);
 /*!40000 ALTER TABLE `trip_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -123,7 +123,7 @@ CREATE TABLE `trip_user_login` (
 
 LOCK TABLES `trip_user_login` WRITE;
 /*!40000 ALTER TABLE `trip_user_login` DISABLE KEYS */;
-INSERT INTO `trip_user_login` VALUES (1,'MV9kJXgxcUgxaDVBbkBuW2xMalo0OGImJTVx','2017-04-17 12:54:46');
+INSERT INTO `trip_user_login` VALUES (1,'MV9kJXgxcUgxaDVBbkBuW2xMalo0OGImJTVx','2017-04-17 12:54:46'),(1,'MV9FbUU3SXFMengqTmVPcmN1NSpQbXg4IW9s','2017-04-18 10:46:47'),(1,'MV9jVWVIWzJ5VWdAc0FXU25XS3FQd31uUVsq','2017-04-19 11:13:11'),(1,'MV8zUG9oIzh1WTM4U0RxM3JQU0JUck5uc0hu','2017-04-19 12:26:11'),(1,'MV9hNVNxIWwlbltLSWJLWUZhIWRsUVhxdlta','2017-04-20 09:06:01'),(1,'MV9FQEJTVzRkNDJUTmVUQUAxbFdtJntXJk1w','2017-04-20 11:36:00');
 /*!40000 ALTER TABLE `trip_user_login` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -136,4 +136,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-04-17 19:28:30
+-- Dump completed on 2017-04-20 18:50:11

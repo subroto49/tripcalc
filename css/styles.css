@@ -8,6 +8,10 @@ input[type=text]{
     font-size: 15px;
 }
 
+a{
+    cursor: pointer;
+}
+
 .right{
     text-align: right;
 }
@@ -47,7 +51,11 @@ legend{
     .data{
         padding: 30px;
         max-width: 99%;
-        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);    
+        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+    .data .panel-body{
+        max-height: 300px;
+        overflow-y: auto;
     }
 }
 
@@ -103,8 +111,13 @@ legend{
         max-width: 65%;
     }
 
-    .data > .panel{
+    .data .panel{
         max-width: 60%;
+    }
+
+    .data .panel-body{
+        max-height: 400px;
+        overflow-y: auto;
     }
 }
 

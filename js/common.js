@@ -1,4 +1,5 @@
 $(function () {
+    console.log("Test");
     $.formUtils.addValidator({
         name: 'emptycheck',
         validatorFunction: function (value, $el, config, language, $form) {
@@ -16,4 +17,10 @@ $(function () {
     setTimeout(function () {
         $('.alert').hide();
     }, 3000);
+
+
+    $("#add_more").click(function(){
+        console.log("Clicked");
+        $("#permanant_div").clone(false).appendTo(".test");
+    });
 });
