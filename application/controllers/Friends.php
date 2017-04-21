@@ -19,5 +19,12 @@ class Friends extends CI_Controller {
             redirect('logout');
         }
     }
+
+    function save_member_data(){
+    	$pstdata = $this->input->post();
+    	if($pstdata){
+    		print_r($pstdata);
+    	}
+    }
 }
 ?>

@@ -22,10 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <?php } ?>
                             <div class="col-lg-12 col-md-12 col-xs-12 sign-in-htm">
                                 <div class="row">
-                                    <input id="inputUser" name='inputUser' type="text" class="form-control" placeholder="Username" data-validation="emptycheck">
+                                    <input id="inputUser" name='inputUser' type="text" class="form-control" placeholder="Username" data-validation="required" data-validation-error-msg-required="Input your Username">
                                 </div>
                                 <div class="row">
-                                    <input id="inputPass" name='inputPass' type="password" class="form-control" placeholder="Password" data-validation="emptycheck">
+                                    <input id="inputPass" name='inputPass' type="password" class="form-control" placeholder="Password" data-validation="required" data-validation-error-msg-required="Input your Password">
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12 col-xs-12 col-lg-6">

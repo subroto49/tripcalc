@@ -1,5 +1,4 @@
 $(function () {
-    console.log("Test");
     $.formUtils.addValidator({
         name: 'emptycheck',
         validatorFunction: function (value, $el, config, language, $form) {
@@ -9,6 +8,7 @@ $(function () {
         errorMessage: 'Please provide a value',
         errorMessageKey: 'badValue'
     });
+
     $.validate({
         modules: 'security',
         lang: 'en'
@@ -20,7 +20,6 @@ $(function () {
 
 
     $("#add_more").click(function(){
-        console.log("Clicked");
-        $("#permanant_div").clone(false).appendTo(".test");
+        $("#permanant_div").clone(false).appendTo(".test").find("input[type='text']").val("");
     });
 });

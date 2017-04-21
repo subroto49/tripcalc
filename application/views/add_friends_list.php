@@ -10,17 +10,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php include 'header/header.php' ?>
         <div class="container-fluid">
             <div class="col-lg-offset-2 data well">
-                <form class="form-horizontal" method="POST" action="">
+                <form class="form-horizontal" method="POST" action="friends/save_member_data" name='addFriend' id= 'addFriend'>
                     <fieldset>
                         <div class="col-lg-offset-2 panel panel-default">
                             <div class="panel-heading">ADD MEMBERS</div>
                             <div class="panel-body">
-                                <div class="form-group" id="permanant_div">
+                                <div class="row" id="permanant_div">
                                     <div class="col-lg-6 col-md-6 col-xs-6">
-                                        <input class="form-control" name="inputName" id="test1" placeholder="Name" type="text" data-validation="emptycheck">
+                                        <input class="form-control" name="inputName" placeholder="Name" type="text" data-validation="required" data-validation-error-msg-required="Required">
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-xs-6">
-                                        <input class="form-control" name="inputEmail" placeholder="Email" type="email" data-validation="email">
+                                        <input class="form-control" name="inputEmail" placeholder="Email" type="text" data-validation="email" data-validation-error-msg-email="Invalid Email Address">
                                     </div>
                                 </div>
                                 <div class="test">
