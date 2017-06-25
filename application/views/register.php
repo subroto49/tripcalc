@@ -9,8 +9,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
         <?php include 'header/header.php' ?>
         <div class="container-fluid">
-            <div class="row login-wrap well infobox">
-                <div class="login-block">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 login_container">
+                <div class="col-lg-offset-3 well login-wrap">
                     <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend>Register</legend>

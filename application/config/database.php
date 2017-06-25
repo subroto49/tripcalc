@@ -77,7 +77,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => (ENVIRONMENT !== 'production') ? 'localhost':'',
 	'username' => (ENVIRONMENT !== 'production') ? 'root':'',
-	'password' => (ENVIRONMENT !== 'production') ? 'root':'',
+	'password' => (ENVIRONMENT !== 'production') ? '':'',
 	'database' => 'tripcalc',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'trip_',

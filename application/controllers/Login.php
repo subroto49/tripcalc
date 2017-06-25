@@ -22,7 +22,7 @@ class Login extends CI_Controller {
             if (count($pstdata)) {
                 $userdata['username'] = $pstdata['inputUser'];
                 $userdata['password'] = $pstdata['inputPass'];
-                $userdata['rememberme'] = $pstdata['inputRemember'];
+                $userdata['rememberme'] = (isset($pstdata['inputRemember'])) ? $pstdata['inputRemember'] : '';
                 $validate = $this->login->validateLogin($userdata);
                 switch ($validate['success']) {
                     case 1:

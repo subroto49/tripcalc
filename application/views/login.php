@@ -4,13 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php include('header/css.html');?>
+        <?php include('header/css.html'); ?>
     </head>
     <body>
         <?php include 'header/header.php' ?>
         <div class="container-fluid">
-            <div class="row well login-wrap">
-                <div class="login-block">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 login_container">
+                <div class="col-lg-offset-3 well well-lg login-wrap">
                     <form class="form-horizontal" method="post">
                         <fieldset>
                             <legend>Log In</legend>
@@ -20,7 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <strong>Oh snap!</strong> Invalid username or password
                                 </div>
                             <?php } ?>
-                            <div class="col-lg-12 col-md-12 col-xs-12 sign-in-htm">
+                            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                                 <div class="row">
                                     <input id="inputUser" name='inputUser' type="text" class="form-control" placeholder="Username" data-validation="required" data-validation-error-msg-required="Input your Username">
                                 </div>
@@ -28,14 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <input id="inputPass" name='inputPass' type="password" class="form-control" placeholder="Password" data-validation="required" data-validation-error-msg-required="Input your Password">
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 col-xs-12 col-lg-6">
+                                    <div class="col-md-12 col-xs-12 col-sm-12 col-lg-6">
                                         <div class="checkbox checkbox-inline checkbox-styled">
                                             <input id="CheckBox1" name="CheckBox1" text=" " tooltip="You will be signed in until you logout" tabindex="4" type="checkbox">
                                             <span>Remember me</span>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 col-xs-12 col-lg-6 signin-butt">
-                                        <input type="submit" class="btn btn-raised btn-primary col-md-12 col-xs-12 col-lg-6" value="Sign In">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-6 signin-butt">
+                                        <input type="submit" class="btn btn-raised btn-primary col-md-12 col-xs-12" value="Sign In">
                                     </div>
                                 </div>
                             </div>
@@ -44,6 +44,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
             </div>
         </div>
-        <?php include('header/js.html');?>
+        <?php include('header/js.html'); ?>
     </body>
 </html>
