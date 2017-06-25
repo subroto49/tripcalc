@@ -1,0 +1,32 @@
+@media only screen and (min-device-width: 480px) and (max-device-height: 720px) {
+
+    .login_container{
+        margin-top: 3%;
+        padding:5px;
+    }
+    
+    .login-wrap{
+        width:100%;
+    }
+   
+    .container-fluid>.navbar-collapse, 
+    .container-fluid>.navbar-header, 
+    .container>.navbar-collapse, 
+    .container>.navbar-header{
+        background-color: #009688;
+    }
+
+    .navbar{
+        z-index: 1000;
+    }
+
+    .data{
+        padding: 30px;
+        max-width: 99%;
+        box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    }
+    .data .panel-body{
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}
